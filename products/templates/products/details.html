@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <dl>
+        <dt>Product</dt>
+        <dd>{{ product.name }}</dd>
+        <dt>Type</dt>
+        <dd>{{ product.type }}</dd>
+        <dt>Calories in 100 g</dt>
+        <dd>{{ product.calories }}</dd>
+    </dl>
+
+    {% for item in parse_list %}
+        <div class="card" style="width: 18rem;">
+            <img src={{ product.image_url }} class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{ recipe_name }}</h5>
+            <p class="card-text">Время приготовления: {{ recipe_preptime }}.</p>
+            <a href="#" class="btn btn-primary">Посмотреть рецепт</a>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <p>We suggest having 
+            <a href="{% url 'products:details' random_meat.id %}">{{ random_meat|lower }}</a> 
+            with <a href="{% url 'products:details' random_sides.id %}">{{ random_sides|lower }}</a>.
+        </p>
+    </div>
+{% endblock  %}
